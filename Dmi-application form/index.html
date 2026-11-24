@@ -9,7 +9,12 @@
   </head>
   <body>
     <main class="page-shell">
-      <form class="application-form" action="#" method="post">
+      <form
+        class="application-form"
+        action="/api/applications"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <header class="form-header">
           <img class="logo" src="images/DMI LOGO.png" alt="DMI logo" />
           <div class="header-copy">
@@ -102,6 +107,7 @@
                 name="surname"
                 autocomplete="family-name"
                 placeholder="surname"
+                required
             /></label>
             <label
               >First Name
@@ -110,6 +116,7 @@
                 name="first-name"
                 autocomplete="given-name"
                 placeholder="First Name"
+                required
             /></label>
             <label
               >Initial
@@ -244,16 +251,16 @@
               <fieldset>
                 <legend>Mode of Learning</legend>
                 <label
-                  ><input type="radio" name="first-mode" /> Face to Face</label
+                  ><input type="radio" name="first-mode" value="face-to-face" /> Face to Face</label
                 >
-                <label><input type="radio" name="first-mode" /> Blended</label>
-                <label><input type="radio" name="first-mode" /> Online</label>
+                <label><input type="radio" name="first-mode" value="blended" /> Blended</label>
+                <label><input type="radio" name="first-mode" value="online" /> Online</label>
               </fieldset>
               <fieldset>
                 <legend>Campus</legend>
-                <label><input type="radio" name="first-campus" /> MH</label>
-                <label><input type="radio" name="first-campus" /> LW</label>
-                <label><input type="radio" name="first-campus" /> BT</label>
+                <label><input type="radio" name="first-campus" value="MH" /> MH</label>
+                <label><input type="radio" name="first-campus" value="LW" /> LW</label>
+                <label><input type="radio" name="first-campus" value="BT" /> BT</label>
               </fieldset>
             </article>
             <article class="programme-choice">
@@ -273,16 +280,16 @@
               <fieldset>
                 <legend>Mode of Learning</legend>
                 <label
-                  ><input type="radio" name="second-mode" /> Face to Face</label
+                  ><input type="radio" name="second-mode" value="face-to-face" /> Face to Face</label
                 >
-                <label><input type="radio" name="second-mode" /> Blended</label>
-                <label><input type="radio" name="second-mode" /> Online</label>
+                <label><input type="radio" name="second-mode" value="blended" /> Blended</label>
+                <label><input type="radio" name="second-mode" value="online" /> Online</label>
               </fieldset>
               <fieldset>
                 <legend>Campus</legend>
-                <label><input type="radio" name="second-campus" /> MH</label>
-                <label><input type="radio" name="second-campus" /> LW</label>
-                <label><input type="radio" name="second-campus" /> BT</label>
+                <label><input type="radio" name="second-campus" value="MH" /> MH</label>
+                <label><input type="radio" name="second-campus" value="LW" /> LW</label>
+                <label><input type="radio" name="second-campus" value="BT" /> BT</label>
               </fieldset>
             </article>
             <article class="programme-choice">
@@ -302,16 +309,16 @@
               <fieldset>
                 <legend>Mode of Learning</legend>
                 <label
-                  ><input type="radio" name="third-mode" /> Face to Face</label
+                  ><input type="radio" name="third-mode" value="face-to-face" /> Face to Face</label
                 >
-                <label><input type="radio" name="third-mode" /> Blended</label>
-                <label><input type="radio" name="third-mode" /> Online</label>
+                <label><input type="radio" name="third-mode" value="blended" /> Blended</label>
+                <label><input type="radio" name="third-mode" value="online" /> Online</label>
               </fieldset>
               <fieldset>
                 <legend>Campus</legend>
-                <label><input type="radio" name="third-campus" /> MH</label>
-                <label><input type="radio" name="third-campus" /> LW</label>
-                <label><input type="radio" name="third-campus" /> BT</label>
+                <label><input type="radio" name="third-campus" value="MH" /> MH</label>
+                <label><input type="radio" name="third-campus" value="LW" /> LW</label>
+                <label><input type="radio" name="third-campus" value="BT" /> BT</label>
               </fieldset>
             </article>
           </div>
@@ -369,15 +376,15 @@
             >
           </h2>
           <div class="inline-options qualification-options">
-            <label><input type="radio" name="qualification-type" /> MSCE</label>
+            <label><input type="radio" name="qualification-type" value="MSCE" /> MSCE</label>
             <label
-              ><input type="radio" name="qualification-type" /> O-Level</label
+              ><input type="radio" name="qualification-type" value="O-Level" /> O-Level</label
             >
             <label
-              ><input type="radio" name="qualification-type" /> A-Level</label
+              ><input type="radio" name="qualification-type" value="A-Level" /> A-Level</label
             >
             <label
-              ><input type="radio" name="qualification-type" /> Other</label
+              ><input type="radio" name="qualification-type" value="Other" /> Other</label
             >
             <label class="specify-field"
               >Specify <input type="text" name="qualification-other"
@@ -494,54 +501,54 @@
                   <td>Subject (Highest to Lowest)</td>
                 </tr>
                 <tr>
-                  <td>1. <input type="text" /></td>
-                  <td>1. <input type="text" /></td>
-                  <td>1. <input type="text" /></td>
+                  <td>1. <input type="text" name="msce-subject-1-1" /></td>
+                  <td>1. <input type="text" name="msce-subject-1-2" /></td>
+                  <td>1. <input type="text" name="msce-subject-1-3" /></td>
                 </tr>
                 <tr>
-                  <td>2. <input type="text" /></td>
-                  <td>2. <input type="text" /></td>
-                  <td>2. <input type="text" /></td>
+                  <td>2. <input type="text" name="msce-subject-2-1" /></td>
+                  <td>2. <input type="text" name="msce-subject-2-2" /></td>
+                  <td>2. <input type="text" name="msce-subject-2-3" /></td>
                 </tr>
                 <tr>
-                  <td>3. <input type="text" /></td>
-                  <td>3. <input type="text" /></td>
-                  <td>3. <input type="text" /></td>
+                  <td>3. <input type="text" name="msce-subject-3-1" /></td>
+                  <td>3. <input type="text" name="msce-subject-3-2" /></td>
+                  <td>3. <input type="text" name="msce-subject-3-3" /></td>
                 </tr>
                 <tr>
-                  <td>4. <input type="text" /></td>
-                  <td>4. <input type="text" /></td>
-                  <td>4. <input type="text" /></td>
+                  <td>4. <input type="text" name="msce-subject-4-1" /></td>
+                  <td>4. <input type="text" name="msce-subject-4-2" /></td>
+                  <td>4. <input type="text" name="msce-subject-4-3" /></td>
                 </tr>
                 <tr>
-                  <td>5. <input type="text" /></td>
-                  <td>5. <input type="text" /></td>
-                  <td>5. <input type="text" /></td>
+                  <td>5. <input type="text" name="msce-subject-5-1" /></td>
+                  <td>5. <input type="text" name="msce-subject-5-2" /></td>
+                  <td>5. <input type="text" name="msce-subject-5-3" /></td>
                 </tr>
                 <tr>
-                  <td>6. <input type="text" /></td>
-                  <td>6. <input type="text" /></td>
-                  <td>6. <input type="text" /></td>
+                  <td>6. <input type="text" name="msce-subject-6-1" /></td>
+                  <td>6. <input type="text" name="msce-subject-6-2" /></td>
+                  <td>6. <input type="text" name="msce-subject-6-3" /></td>
                 </tr>
                 <tr>
-                  <td>7. <input type="text" /></td>
-                  <td>7. <input type="text" /></td>
-                  <td>7. <input type="text" /></td>
+                  <td>7. <input type="text" name="msce-subject-7-1" /></td>
+                  <td>7. <input type="text" name="msce-subject-7-2" /></td>
+                  <td>7. <input type="text" name="msce-subject-7-3" /></td>
                 </tr>
                 <tr>
-                  <td>8. <input type="text" /></td>
-                  <td>8. <input type="text" /></td>
-                  <td>8. <input type="text" /></td>
+                  <td>8. <input type="text" name="msce-subject-8-1" /></td>
+                  <td>8. <input type="text" name="msce-subject-8-2" /></td>
+                  <td>8. <input type="text" name="msce-subject-8-3" /></td>
                 </tr>
                 <tr>
-                  <td>9. <input type="text" /></td>
-                  <td>9. <input type="text" /></td>
-                  <td>9. <input type="text" /></td>
+                  <td>9. <input type="text" name="msce-subject-9-1" /></td>
+                  <td>9. <input type="text" name="msce-subject-9-2" /></td>
+                  <td>9. <input type="text" name="msce-subject-9-3" /></td>
                 </tr>
                 <tr>
-                  <td>10. <input type="text" /></td>
-                  <td>10. <input type="text" /></td>
-                  <td>10. <input type="text" /></td>
+                  <td>10. <input type="text" name="msce-subject-10-1" /></td>
+                  <td>10. <input type="text" name="msce-subject-10-2" /></td>
+                  <td>10. <input type="text" name="msce-subject-10-3" /></td>
                 </tr>
               </tbody>
             </table>
@@ -676,54 +683,54 @@
                   <td>Subject (Highest to Lowest)</td>
                 </tr>
                 <tr>
-                  <td>1. <input type="text" /></td>
-                  <td>1. <input type="text" /></td>
-                  <td>1. <input type="text" /></td>
+                  <td>1. <input type="text" name="alevel-subject-1-1" /></td>
+                  <td>1. <input type="text" name="alevel-subject-1-2" /></td>
+                  <td>1. <input type="text" name="alevel-subject-1-3" /></td>
                 </tr>
                 <tr>
-                  <td>2. <input type="text" /></td>
-                  <td>2. <input type="text" /></td>
-                  <td>2. <input type="text" /></td>
+                  <td>2. <input type="text" name="alevel-subject-2-1" /></td>
+                  <td>2. <input type="text" name="alevel-subject-2-2" /></td>
+                  <td>2. <input type="text" name="alevel-subject-2-3" /></td>
                 </tr>
                 <tr>
-                  <td>3. <input type="text" /></td>
-                  <td>3. <input type="text" /></td>
-                  <td>3. <input type="text" /></td>
+                  <td>3. <input type="text" name="alevel-subject-3-1" /></td>
+                  <td>3. <input type="text" name="alevel-subject-3-2" /></td>
+                  <td>3. <input type="text" name="alevel-subject-3-3" /></td>
                 </tr>
                 <tr>
-                  <td>4. <input type="text" /></td>
-                  <td>4. <input type="text" /></td>
-                  <td>4. <input type="text" /></td>
+                  <td>4. <input type="text" name="alevel-subject-4-1" /></td>
+                  <td>4. <input type="text" name="alevel-subject-4-2" /></td>
+                  <td>4. <input type="text" name="alevel-subject-4-3" /></td>
                 </tr>
                 <tr>
-                  <td>5. <input type="text" /></td>
-                  <td>5. <input type="text" /></td>
-                  <td>5. <input type="text" /></td>
+                  <td>5. <input type="text" name="alevel-subject-5-1" /></td>
+                  <td>5. <input type="text" name="alevel-subject-5-2" /></td>
+                  <td>5. <input type="text" name="alevel-subject-5-3" /></td>
                 </tr>
                 <tr>
-                  <td>6. <input type="text" /></td>
-                  <td>6. <input type="text" /></td>
-                  <td>6. <input type="text" /></td>
+                  <td>6. <input type="text" name="alevel-subject-6-1" /></td>
+                  <td>6. <input type="text" name="alevel-subject-6-2" /></td>
+                  <td>6. <input type="text" name="alevel-subject-6-3" /></td>
                 </tr>
                 <tr>
-                  <td>7. <input type="text" /></td>
-                  <td>7. <input type="text" /></td>
-                  <td>7. <input type="text" /></td>
+                  <td>7. <input type="text" name="alevel-subject-7-1" /></td>
+                  <td>7. <input type="text" name="alevel-subject-7-2" /></td>
+                  <td>7. <input type="text" name="alevel-subject-7-3" /></td>
                 </tr>
                 <tr>
-                  <td>8. <input type="text" /></td>
-                  <td>8. <input type="text" /></td>
-                  <td>8. <input type="text" /></td>
+                  <td>8. <input type="text" name="alevel-subject-8-1" /></td>
+                  <td>8. <input type="text" name="alevel-subject-8-2" /></td>
+                  <td>8. <input type="text" name="alevel-subject-8-3" /></td>
                 </tr>
                 <tr>
-                  <td>9. <input type="text" /></td>
-                  <td>9. <input type="text" /></td>
-                  <td>9. <input type="text" /></td>
+                  <td>9. <input type="text" name="alevel-subject-9-1" /></td>
+                  <td>9. <input type="text" name="alevel-subject-9-2" /></td>
+                  <td>9. <input type="text" name="alevel-subject-9-3" /></td>
                 </tr>
                 <tr>
-                  <td>10. <input type="text" /></td>
-                  <td>10. <input type="text" /></td>
-                  <td>10. <input type="text" /></td>
+                  <td>10. <input type="text" name="alevel-subject-10-1" /></td>
+                  <td>10. <input type="text" name="alevel-subject-10-2" /></td>
+                  <td>10. <input type="text" name="alevel-subject-10-3" /></td>
                 </tr>
               </tbody>
             </table>
@@ -864,5 +871,6 @@
         </div>
       </form>
     </main>
+    <script src="js/app.js" defer></script>
   </body>
 </html>
